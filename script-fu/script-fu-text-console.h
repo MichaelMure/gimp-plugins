@@ -16,22 +16,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#ifndef __SCRIPT_FU_SERVER_H__
-#define __SCRIPT_FU_SERVER_H__
+#ifndef __SCRIPT_FU_TEXT_CONSOLE_H__
+#define __SCRIPT_FU_TEXT_CONSOLE_H__
 
-#include <glib.h>
-#include <libgimp/gimp.h>
+void  script_fu_text_console_run (gchar       *name,
+				  gint         nparams,
+				  GimpParam   *params,
+				  gint        *nreturn_vals,
+				  GimpParam  **return_vals);
 
-gint script_fu_server_get_mode (void);
-
-void script_fu_server_quit (void);
-
-void  script_fu_server_run    (gchar       *name,
-			       gint         nparams,
-			       GimpParam   *params,
-			       gint        *nreturn_vals,
-			       GimpParam  **return_vals);
-
-void  script_fu_server_listen (gint         timeout);
-
-#endif /*  __SCRIPT_FU_SERVER__  */
+#endif /*  __SCRIPT_FU_CONSOLE__  */

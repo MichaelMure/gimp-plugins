@@ -92,6 +92,29 @@ INSTALLATION
        If you don't have unix, you can install linux instead
        (http://www.linux.org/)
 
+OVERWRITING INSTALL LOCATIONS (PREFIX)
+
+       In the rare case that you want to install the Gimp-Perl modules
+       somewhere else than in the standard location then there is a
+       standard way to accomplish this.
+
+       Usually, you can just use the PREFIX=/path option to the
+       Makefile.PL, or the other common solution of adding the INST* path
+       definitions onto the "make install" commandline.
+
+       These options are described in the "perldoc ExtUtils::MakeMaker"
+       manpage.
+
+       If you are configuring the gimp-pelr module that comes with the
+       Gimp sourcetree this won't work. In that case you can set the
+       environment variable:
+
+       PERL_MM_OPT='whatever options you want to pass to MakeMaker'
+
+       before running configure. The arguments that you put into that
+       variable will be passed to the Makefile.PL as if given on the
+       commandline.
+
 SUPPORT/MAILING LISTS/MORE INFO
 
        There is a mailinglist for general discussion about Gimp-Perl.  To
